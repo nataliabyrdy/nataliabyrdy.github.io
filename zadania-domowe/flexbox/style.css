@@ -1,39 +1,41 @@
-body{
+body {
     color: #fff;
     text-transform: uppercase;
-    font-size: 30px;
     box-sizing: border-box;
 }
 
-.container-all{
+.container-all {
     width: 800px;
     height: 300px;
 }
 
-h1, h2, h3, p{
+h1,
+h2,
+h3,
+p {
     font-size: 20px;
     margin: 0;
 }
 
-header{
+header {
     background-color: red;
     padding: 10px;
     display: flex;
     justify-content: center;
 }
 
-.sec-aside{
+.sec-aside {
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
     align-items: flex-start;
 }
 
-.left{
+.left {
     background-color: green;
 }
 
-.right{
+.right {
     background-color: pink;
 }
 
@@ -41,15 +43,88 @@ section {
     background-color: blue;
     text-align: center;
 }
-footer{
+
+footer {
     background-color: purple;
     padding: 10px;
     display: flex;
     justify-content: center;
 }
 
-.container-section{
+.container-section {
     display: flex;
     flex-direction: row;
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+    .container-all {
+        width: 500px;
+    }
+
+    .container-section {
+        width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .left {
+        width: 100%;
+        order: 3;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+
+    section {
+        width: 70%;
+        order: 1;
+    }
+
+    .right {
+        width: 30%;
+        padding: 0;
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+
+    h1,
+    h2,
+    h3,
+    p {
+        font-size: 15px;
+    }
+
+    .container-all {
+        width: 300px;
+    }
+
+    .container-section {
+        flex-direction: column;
+    }
+
+    .left {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        order: 2;
+    }
+
+    .right {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        order: 3;
+    }
+
+    section {
+        padding-bottom: 80px;
+    }
+}
+
+/*
+- powyżej 992px
+- między 768px a 992px
+- poniżej 768px
+
+PODPOWIEDŹ:
