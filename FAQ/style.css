@@ -1,0 +1,19 @@
+h1,
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-link {
+    color: rgb(255, 171, 171);
+}
+
+.btn-link:hover {
+    color: black;
+    border: none;
+}
+
+.btn-link:focus {
+    box-shadow: none;
+}
